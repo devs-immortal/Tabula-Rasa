@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tabula_rasa_lead:item/lead_ingot"
+  }
+}

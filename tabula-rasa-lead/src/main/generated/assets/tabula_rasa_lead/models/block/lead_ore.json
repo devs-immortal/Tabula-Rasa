@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tabula_rasa_lead:block/lead_ore"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "tabula_rasa_lead",
+  "version": "${version}",
+
+  "name": "Tabula Rasa Lead",
+  "description": "Tabula Rasa Lead",
+  "authors": [
+    "Azazelthedemonlord",
+    "SollyW"
+  ],
+  "contact": {
+    "sources": "https://github.com/devs-immortal/Tabula-Rasa",
+    "issues": "https://github.com/devs-immortal/Tabula-Rasa/issues"
+  },
+
+  "license": "Undecided",
+  "icon": "assets/tabula_rasa_lead/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.immortaldevs.tabularasa.lead.TabulaRasaLead"
+    ],
+    "fabric-datagen": [
+      "net.immortaldevs.tabularasa.lead.TabulaRasaLeadDataGenerator"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}

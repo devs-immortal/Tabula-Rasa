@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "lead_ingot",
+  "ingredient": {
+    "item": "tabula_rasa_lead:lead_ore"
+  },
+  "result": "tabula_rasa_lead:lead_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "tabula_rasa_tin",
+  "version": "${version}",
+
+  "name": "Tabula Rasa Tin",
+  "description": "Tabula Rasa Tin",
+  "authors": [
+    "Azazelthedemonlord",
+    "SollyW"
+  ],
+  "contact": {
+    "sources": "https://github.com/devs-immortal/Tabula-Rasa",
+    "issues": "https://github.com/devs-immortal/Tabula-Rasa/issues"
+  },
+
+  "license": "Undecided",
+  "icon": "assets/tabula_rasa_tin/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.immortaldevs.tabularasa.tin.TabulaRasaTin"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}

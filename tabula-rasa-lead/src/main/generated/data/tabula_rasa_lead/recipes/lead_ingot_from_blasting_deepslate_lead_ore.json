@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "lead_ingot",
+  "ingredient": {
+    "item": "tabula_rasa_lead:deepslate_lead_ore"
+  },
+  "result": "tabula_rasa_lead:lead_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

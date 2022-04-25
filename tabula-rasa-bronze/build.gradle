@@ -1,0 +1,5 @@
+archivesBaseName = "tabula-rasa-bronze"
+
+dependencies {
+    modImplementation project(":tabula-rasa-tin")
+}
