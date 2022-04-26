@@ -1,5 +1,9 @@
+plugins {
+    id "tabula-rasa.module-conventions"
+}
+
 archivesBaseName = "tabula-rasa-bronze"
 
 dependencies {
-    modImplementation project(":tabula-rasa-tin")
+    api project(path: ":tabula-rasa-tin", configuration: "namedElements")
 }

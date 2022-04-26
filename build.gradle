@@ -1,93 +1,18 @@
-//file:noinspection All
-
 plugins {
-    id "fabric-loom" version "0.11-SNAPSHOT"
-//     id "maven-publish"
+    id "tabula-rasa.module-conventions"
 }
 
-archivesBaseName = "tabula-rasa"
-
-allprojects {
-    apply plugin: "fabric-loom"
-
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-
-    group = "net.immortaldevs.tabula-rasa"
-    version = rootProject.tabula_rasa_version
-
-    repositories {
-    }
-
-    dependencies {
-        minecraft "com.mojang:minecraft:${project.minecraft_version}"
-        mappings "net.fabricmc:yarn:${project.mappings_version}:v2"
-        modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-        modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
-    }
-
-    processResources {
-        inputs.property "version", project.version
-
-        filesMatching("fabric.mod.json") {
-            expand "version": project.version
-        }
-    }
-
-    tasks.withType(JavaCompile).configureEach {
-        it.options.release = 17
-    }
-
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(project.java_version)
-        }
-
-        withSourcesJar()
-    }
-
-//     publishing {
-//         publications {
-//             mavenJava(MavenPublication) {
-//             from components.java
-//             }
-//         }
-//     }
-}
-
-subprojects {
-    rootProject.dependencies {
-        modImplementation include(project)
-    }
-
-    sourceSets {
-        main {
-            resources {
-                srcDirs += ["src/main/generated"]
-            }
-        }
-    }
-
-    loom {
-        runs {
-            datagen {
-                server()
-
-                name "Data Generation"
-                vmArg "-Dfabric-api.datagen"
-                vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-                vmArg "-Dfabric-api.datagen.modid=${archivesBaseName.replace('-' as char, '_' as char)}"
-
-                runDir "build/datagen"
-            }
-        }
-    }
-
-    afterEvaluate {
-        genSources.enabled = false
-        genSourcesWithCfr.enabled = false
-        genSourcesWithFernFlower.enabled = false
-        unpickJar.enabled = false
-    }
+dependencies {
+    api include(project(path: "tabula-rasa-aluminium", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-brass", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-bronze", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-lead", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-phosphor", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-potassium", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-silver", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-steel", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-sulphur", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-tin", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-titanium", configuration: "namedElements"))
+    api include(project(path: "tabula-rasa-zinc", configuration: "namedElements"))
 }

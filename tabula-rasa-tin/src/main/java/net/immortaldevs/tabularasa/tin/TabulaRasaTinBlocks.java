@@ -20,6 +20,6 @@ public final class TabulaRasaTinBlocks {
         Registry.register(Registry.BLOCK, id("tin_ore"), TIN_ORE);
         Registry.register(Registry.BLOCK, id("deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
         Registry.register(Registry.BLOCK, id("tin_block"), TIN_BLOCK);
-        Registry.register(Registry.BLOCK, id("deepslate_tin_block"), RAW_TIN_BLOCK);
+        Registry.register(Registry.BLOCK, id("raw_tin_block"), RAW_TIN_BLOCK);
     }
 }

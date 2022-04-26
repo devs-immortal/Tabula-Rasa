@@ -20,6 +20,6 @@ public final class TabulaRasaAluminiumBlocks {
         Registry.register(Registry.BLOCK, id("aluminium_ore"), ALUMINIUM_ORE);
         Registry.register(Registry.BLOCK, id("deepslate_aluminium_ore"), DEEPSLATE_ALUMINIUM_ORE);
         Registry.register(Registry.BLOCK, id("aluminium_block"), ALUMINIUM_BLOCK);
-        Registry.register(Registry.BLOCK, id("deepslate_aluminium_block"), RAW_ALUMINIUM_BLOCK);
+        Registry.register(Registry.BLOCK, id("raw_aluminium_block"), RAW_ALUMINIUM_BLOCK);
     }
 }

@@ -17,6 +17,6 @@ public final class TabulaRasaLeadBlocks {
         Registry.register(Registry.BLOCK, id("lead_ore"), LEAD_ORE);
         Registry.register(Registry.BLOCK, id("deepslate_lead_ore"), DEEPSLATE_LEAD_ORE);
         Registry.register(Registry.BLOCK, id("lead_block"), LEAD_BLOCK);
-        Registry.register(Registry.BLOCK, id("deepslate_lead_block"), RAW_LEAD_BLOCK);
+        Registry.register(Registry.BLOCK, id("raw_lead_block"), RAW_LEAD_BLOCK);
     }
 }

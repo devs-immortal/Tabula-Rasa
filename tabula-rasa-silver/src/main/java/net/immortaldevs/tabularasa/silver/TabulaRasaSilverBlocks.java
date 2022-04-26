@@ -20,6 +20,6 @@ public final class TabulaRasaSilverBlocks {
         Registry.register(Registry.BLOCK, id("silver_ore"), SILVER_ORE);
         Registry.register(Registry.BLOCK, id("deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
         Registry.register(Registry.BLOCK, id("silver_block"), SILVER_BLOCK);
-        Registry.register(Registry.BLOCK, id("deepslate_silver_block"), RAW_SILVER_BLOCK);
+        Registry.register(Registry.BLOCK, id("raw_silver_block"), RAW_SILVER_BLOCK);
     }
 }
