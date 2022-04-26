@@ -18,7 +18,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
-          path: ./build/libs/
+          path: |
+            ./build/libs/
+            ./tabula-rasa-*/build/libs/
 #      - name: Get release version
 #        uses: christian-draeger/read-properties@1.0.1
 #        id: version
