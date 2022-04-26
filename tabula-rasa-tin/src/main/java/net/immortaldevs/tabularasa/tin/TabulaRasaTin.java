@@ -8,6 +8,8 @@ public final class TabulaRasaTin implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        TabulaRasaTinBlocks.init();
+        TabulaRasaTinItems.init();
     }
 
     public static Identifier id(String path) {

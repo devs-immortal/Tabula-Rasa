@@ -27,14 +27,6 @@ allprojects {
         modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
     }
 
-    sourceSets {
-        main {
-            resources {
-                srcDirs += ["src/main/generated"]
-            }
-        }
-    }
-
     processResources {
         inputs.property "version", project.version
 
@@ -55,20 +47,6 @@ allprojects {
         withSourcesJar()
     }
 
-    loom {
-        runs {
-            datagen {
-                server()
-
-                name "Data Generation"
-                vmArg "-Dfabric-api.datagen"
-                vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-
-                runDir "build/datagen"
-            }
-        }
-    }
-
 //     publishing {
 //         publications {
 //             mavenJava(MavenPublication) {
@@ -81,5 +59,35 @@ allprojects {
 subprojects {
     rootProject.dependencies {
         modImplementation include(project)
+    }
+
+    sourceSets {
+        main {
+            resources {
+                srcDirs += ["src/main/generated"]
+            }
+        }
+    }
+
+    loom {
+        runs {
+            datagen {
+                server()
+
+                name "Data Generation"
+                vmArg "-Dfabric-api.datagen"
+                vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+                vmArg "-Dfabric-api.datagen.modid=${archivesBaseName.replace('-' as char, '_' as char)}"
+
+                runDir "build/datagen"
+            }
+        }
+    }
+
+    afterEvaluate {
+        genSources.enabled = false
+        genSourcesWithCfr.enabled = false
+        genSourcesWithFernFlower.enabled = false
+        unpickJar.enabled = false
     }
 }

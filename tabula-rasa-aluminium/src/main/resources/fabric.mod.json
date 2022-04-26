@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "net.immortaldevs.tabularasa.aluminium.TabulaRasaAluminium"
+    ],
+    "fabric-datagen": [
+      "net.immortaldevs.tabularasa.aluminium.TabulaRasaAluminiumDataGenerator"
     ]
   },
 

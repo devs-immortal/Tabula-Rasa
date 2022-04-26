@@ -8,6 +8,8 @@ public final class TabulaRasaZinc implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        TabulaRasaZincBlocks.init();
+        TabulaRasaZincItems.init();
     }
 
     public static Identifier id(String path) {

@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "net.immortaldevs.tabularasa.silver.TabulaRasaSilver"
+    ],
+    "fabric-datagen": [
+      "net.immortaldevs.tabularasa.silver.TabulaRasaSilverDataGenerator"
     ]
   },
 

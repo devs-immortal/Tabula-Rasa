@@ -8,6 +8,8 @@ public final class TabulaRasaSilver implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        TabulaRasaSilverBlocks.init();
+        TabulaRasaSilverItems.init();
     }
 
     public static Identifier id(String path) {
