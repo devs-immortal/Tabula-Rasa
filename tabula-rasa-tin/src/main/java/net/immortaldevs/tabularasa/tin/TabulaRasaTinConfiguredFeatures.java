@@ -25,7 +25,7 @@ public final class TabulaRasaTinConfiguredFeatures {
                     FluidTags.WATER,
                     BiasedIntProvider.create(2, 4),
                     ConstantIntProvider.create(12),
-                    UniformIntProvider.create(-7, 7),
+                    UniformIntProvider.create(-9, 9),
                     UniformIntProvider.create(2, 7),
                     new OreFeatureConfig(
                             List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
