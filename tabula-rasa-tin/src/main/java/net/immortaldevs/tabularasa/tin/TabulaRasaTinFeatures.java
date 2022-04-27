@@ -6,9 +6,10 @@ import net.minecraft.world.gen.feature.Feature;
 import static net.immortaldevs.tabularasa.tin.TabulaRasaTin.id;
 
 public final class TabulaRasaTinFeatures {
-    public static final Feature<TinVeinFeatureConfig> TIN_VEIN = new TinVeinFeature(TinVeinFeatureConfig.CODEC);
+    public static final Feature<AquiferOreVeinFeatureConfig> AQUIFER_ORE_VEIN
+            = new AquiferOreVeinFeature(AquiferOreVeinFeatureConfig.CODEC);
 
     public static void init() {
-        Registry.register(Registry.FEATURE, id("tin_vein"), TIN_VEIN);
+        Registry.register(Registry.FEATURE, id("aquifer_ore_vein"), AQUIFER_ORE_VEIN);
     }
 }

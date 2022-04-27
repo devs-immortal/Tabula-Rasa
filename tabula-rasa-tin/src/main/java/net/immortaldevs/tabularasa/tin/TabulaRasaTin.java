@@ -15,6 +15,8 @@ public final class TabulaRasaTin implements ModInitializer {
     public void onInitialize() {
         TabulaRasaTinBlocks.init();
         TabulaRasaTinItems.init();
+        TabulaRasaTinRuleTestTypes.init();
+        TabulaRasaTinIntProviderTypes.init();
         TabulaRasaTinFeatures.init();
         TabulaRasaTinConfiguredFeatures.init();
         TabulaRasaTinPlacedFeatures.init();

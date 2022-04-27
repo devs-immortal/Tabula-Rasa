@@ -26,6 +26,9 @@
       "net.immortaldevs.tabularasa.tin.TabulaRasaTinDataGenerator"
     ]
   },
+  "mixins": [
+    "tabula_rasa_tin.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.13.3",
