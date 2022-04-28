@@ -1,9 +1,5 @@
 package net.immortaldevs.tabularasa.tin;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.structure.rule.RandomBlockMatchRuleTest;
-import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -29,9 +25,9 @@ public final class TabulaRasaTinConfiguredFeatures {
                     UniformIntProvider.create(2, 7),
                     new OreFeatureConfig(
                             List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-                                            Blocks.PINK_STAINED_GLASS.getDefaultState()),
+                                            TabulaRasaTinBlocks.TIN_ORE.getDefaultState()),
                                     OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
-                                            Blocks.PINK_STAINED_GLASS.getDefaultState())),
+                                            TabulaRasaTinBlocks.DEEPSLATE_TIN_ORE.getDefaultState())),
                             7),
                     BiasedIntProvider.create(1, 3),
                     BiasedIntProvider.create(-3, 3),
@@ -40,19 +36,19 @@ public final class TabulaRasaTinConfiguredFeatures {
                             List.of(OreFeatureConfig.createTarget(new RandomTagMatchRuleTest(
                                                     BlockTags.STONE_ORE_REPLACEABLES,
                                                     0.7f),
-                                            Blocks.MAGENTA_STAINED_GLASS.getDefaultState()),
+                                            TabulaRasaTinBlocks.TIN_ORE.getDefaultState()),
                                     OreFeatureConfig.createTarget(new RandomTagMatchRuleTest(
                                                     BlockTags.DEEPSLATE_ORE_REPLACEABLES,
                                                     0.7f),
-                                            Blocks.MAGENTA_STAINED_GLASS.getDefaultState()),
+                                            TabulaRasaTinBlocks.DEEPSLATE_TIN_ORE.getDefaultState()),
                                     OreFeatureConfig.createTarget(new RandomTagMatchRuleTest(
                                                     BlockTags.STONE_ORE_REPLACEABLES,
                                                     0.2f),
-                                            Blocks.MAGENTA_WOOL.getDefaultState()),
+                                            TabulaRasaTinBlocks.RAW_TIN_BLOCK.getDefaultState()),
                                     OreFeatureConfig.createTarget(new RandomTagMatchRuleTest(
                                                     BlockTags.DEEPSLATE_ORE_REPLACEABLES,
                                                     0.2f),
-                                            Blocks.MAGENTA_WOOL.getDefaultState())),
+                                            TabulaRasaTinBlocks.RAW_TIN_BLOCK.getDefaultState())),
                             42)));
 
     public static void init() {
