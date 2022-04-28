@@ -1,17 +1,4 @@
-pluginManagement {
-    repositories {
-        maven {
-            name = "Fabric"
-            url = "https://maven.fabricmc.net/"
-        }
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-
 rootProject.name = "tabula-rasa"
-
-include "tabula-rasa-zinc"
 
 include "tabula-rasa-aluminium"
 include "tabula-rasa-brass"
@@ -24,3 +11,4 @@ include "tabula-rasa-steel"
 include "tabula-rasa-sulphur"
 include "tabula-rasa-tin"
 include "tabula-rasa-titanium"
+include "tabula-rasa-zinc"

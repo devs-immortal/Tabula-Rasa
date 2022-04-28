@@ -9,6 +9,10 @@ group = "net.immortaldevs.tabula-rasa"
 version = rootProject.tabula_rasa_version
 
 repositories {
+    maven {
+        name "Jitpack"
+        url "https://jitpack.io"
+    }
 }
 
 dependencies {
@@ -17,6 +21,9 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
+    modImplementation include("com.github.devs-immortal:Divine-Intervention:${project.divine_intervention_version}")
+
+    annotationProcessor "com.github.devs-immortal:Divine-Intervention:${project.divine_intervention_version}"
 }
 
 processResources {
@@ -57,6 +64,7 @@ loom {
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.strict-validation"
             vmArg "-Dfabric-api.datagen.modid=${archivesBaseName.replace('-' as char, '_' as char)}"
 
             runDir "build/datagen"
